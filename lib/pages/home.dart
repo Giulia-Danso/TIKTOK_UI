@@ -12,7 +12,7 @@ class UserHomePage extends StatelessWidget {
       body: PageView(
         controller: _controller,
         scrollDirection: Axis.vertical,
-        children: [
+        children: const [
           MyPost1(),
           MyPost2(),
           MyPost3(),

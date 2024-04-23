@@ -7,7 +7,9 @@ class PostTemplate extends StatelessWidget {
   final String numberOfLikes;
   final String numberOfComments;
   final String numberOfShares;
+  final String numberOfFavorite;
   final userPost;
+
   const PostTemplate({
     required this.username,
     required this.videoDescription,
@@ -15,6 +17,7 @@ class PostTemplate extends StatelessWidget {
     required this.numberOfLikes,
     required this.numberOfShares,
     required this.userPost,
+    required this.numberOfFavorite,
   });
 
   @override
@@ -49,7 +52,7 @@ class PostTemplate extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: videoDescription,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                           ),
                         ),
@@ -72,7 +75,7 @@ class PostTemplate extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              alignment: Alignment(1, 1),
+              alignment: const Alignment(1, 1),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -87,6 +90,12 @@ class PostTemplate extends StatelessWidget {
                       Icons.chat_bubble_outlined,
                     ),
                     number: numberOfComments,
+                  ),
+                  MyButton(
+                    icon: const Icon(
+                      Icons.bookmark,
+                    ),
+                    number: numberOfShares,
                   ),
                   MyButton(
                     icon: const Icon(

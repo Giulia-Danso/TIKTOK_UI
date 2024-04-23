@@ -7,7 +7,7 @@ class UserSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: const Center(
-        child: Text('Inbox'),
+        child: Text('Search'),
       ),
     );
   }
