@@ -40,6 +40,7 @@ class PostTemplate extends StatelessWidget {
                   Text(
                     '@' + username,
                     style: const TextStyle(
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),

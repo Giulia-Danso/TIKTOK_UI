@@ -66,7 +66,7 @@ class UserProfilePage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                      alignment: Alignment.bottomRight,
+                      alignment: Alignment.centerRight,
                       child: Column(
                         children: [
                           const Text(
@@ -106,7 +106,7 @@ class UserProfilePage extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Container(
-                                      alignment: Alignment.bottomLeft,
+                                      alignment: Alignment.centerLeft,
                                       child: const Column(
                                         children: [
                                           Text(
@@ -134,13 +134,7 @@ class UserProfilePage extends StatelessWidget {
                             ),
                           ),
                         ],
-                      )
-                      // buttons -> edit profile, insta links, bookmark
-
-                      // bio
-
-                      // default lab controller
-                      ),
+                      )),
                 ),
               ],
             ),
@@ -152,39 +146,37 @@ class UserProfilePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(5)),
                   child: const Padding(
                     padding: EdgeInsets.symmetric(
                       vertical: 15.0,
                       horizontal: 40,
                     ),
-                    child: Text(
-                      'Edit profile',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                      ),
-                    ),
+                    child: Text('Edit profile',
+                        style: TextStyle(color: Colors.black, fontSize: 18)),
                   ),
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.circular(5)),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: Container(
-                    child: Padding(
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        borderRadius: BorderRadius.circular(5)),
+                    child: Container(
                       padding: const EdgeInsets.all(15.0),
                       child: Icon(
                         Icons.camera_alt,
                         color: Colors.grey[800],
                       ),
                     ),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey.shade300),
-                        borderRadius: BorderRadius.circular(5)),
                   ),
                 ),
                 Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(5)),
                   child: const Padding(
                     padding: EdgeInsets.all(15.0),
                     child: Icon(
@@ -192,9 +184,6 @@ class UserProfilePage extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.circular(5)),
                 ),
               ],
             ),
