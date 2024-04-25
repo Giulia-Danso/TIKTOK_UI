@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tiktok_ui/util/profiletab_1.dart';
 import 'package:tiktok_ui/util/profiletab_2.dart';
 import 'package:tiktok_ui/util/profiletab_3.dart';
@@ -44,6 +42,9 @@ class UserProfilePage extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.grey[200],
+                image: const DecorationImage(
+                  image: AssetImage('lib/assets/selfie.jpeg'),
+                ),
               ),
             ),
 
@@ -159,6 +160,7 @@ class UserProfilePage extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade300),
                     borderRadius: BorderRadius.circular(5),
+                    //  image: DecorationImage(image: )
                   ),
                   child: const Text(
                     'Edit Profile',
